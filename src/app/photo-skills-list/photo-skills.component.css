@@ -1,0 +1,37 @@
+.horizontal{
+    float: left;
+}
+
+.horizontal *{
+
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.vertical {
+    float: left;
+    width: 100%;
+}
+
+.vertical  > *{
+    display :block;
+    width: 100%;
+}
+
+.link-gallery {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

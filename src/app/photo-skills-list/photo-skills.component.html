@@ -1,0 +1,28 @@
+<h2>Our expertise are ...</h2>
+
+<div class="horizontal">
+    <div *ngFor="let skill of skills">
+        <div class="vertical">
+            <a [title]="skill.name + '.details'" [routerLink]="['/home',skill.name]">
+                <h3>
+                    {{skill.name}}
+                </h3>
+            </a>
+            <app-discount-label [skill]="skill">
+            </app-discount-label>
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <a class="link-gallery" title="View Gallery" [routerLink]="['/gallery']"> 
+        View Gallery
+    </a>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

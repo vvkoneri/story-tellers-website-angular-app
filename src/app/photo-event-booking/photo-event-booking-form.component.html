@@ -1,0 +1,40 @@
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit(bookingForm.value)" class="event-form">
+    <div>
+        <label for="name">
+          Name
+        </label>
+        <input id="name" type="text" formControlName="Name">
+      </div>
+    
+      <div>
+        <label for="place">
+          Place
+        </label>
+        <input id="place" type="text" formControlName="Place">
+        
+      </div>
+
+      <div>
+        <label for="event_date">
+          Event Date
+        </label>
+        <input id="event_date" type="date" formControlName="Event Date">
+
+      </div>
+
+      <div>
+        <label for="contact">
+          Contact Number
+        </label>
+        <input id="contact" type="text" formControlName="Contact Number">
+      </div>
+
+      <div>
+        <label for="type">
+          Event Type
+        </label>
+        <input id="type" type="text" formControlName="Event Type">
+      </div>
+    
+    <button class="button" type="submit">Book</button>
+</form>

@@ -1,0 +1,16 @@
+
+<div *ngIf="skill">
+  <h3>{{ skill.name }}</h3>
+  <p>{{ skill.description}}</p>
+  <h4>We have covered upto {{skill.eventsCovered}} events</h4>
+
+  <div>
+    <button (click)="getQuote(skill.name)" class="button-pw">
+        Get a Quote
+    </button>
+    <app-event-book [skill]="skill" (notify)="onNotify()" style="margin-right: 25px;">
+    </app-event-book>
+  </div>
+
+  <h5 *ngIf="quotePrice"> Best price : {{ quotePrice }} Rs </h5>
+</div>

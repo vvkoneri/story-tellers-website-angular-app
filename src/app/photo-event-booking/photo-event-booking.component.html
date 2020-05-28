@@ -1,0 +1,6 @@
+<button (click)="activate()">
+    Book an event
+</button>
+<app-booking *ngIf="activateForm" [skill]="skill" (notify)="deactivate()">
+</app-booking>
+
