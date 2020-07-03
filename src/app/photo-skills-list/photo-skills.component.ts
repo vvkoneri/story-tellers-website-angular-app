@@ -1,21 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { skills } from '../skills';
+import { skills } from '../constants/skills';
+import { Skill } from '../interfaces/skills';
+import { SearchKeywordsService } from '../services/search-keywords.service';
 
 @Component({
   selector: 'app-photo-skills',
   templateUrl: './photo-skills.component.html',
   styleUrls: ['./photo-skills.component.css']
 })
-export class PhotoSkillsComponent {
-  skills = skills;
+export class PhotoSkillsComponent  implements OnInit {
+  
+  skills: Skill[];
+  searchParams;
 
-  enquire() {
-    window.alert('We will get back to you shortly...');
+  constructor(private __searchSvc: SearchKeywordsService){
+    this.skills = skills;
+    this.searchParams = [];
   }
 
-  onNotify() {
-    window.alert("Your booking is confirmed")
+  trackBySkillId(index: number, skill: Skill) : number { return skill.id; }
+  
+  async ngOnInit () {
+    let searchRecord = await this.__searchSvc.getSearchKeywords();
+    if(searchRecord) {
+      this.searchParams = searchRecord['search_query'].split(" ");
+    }
+  }
+
+  highlight(skillName: never) {
+      if (this.searchParams.length === 0 ) {
+        return 1;
+      }
+        
+      if(this.searchParams.indexOf(skillName) > -1) {
+        return 1;
+      } else {
+        return 0.3;
+      }
   }
 }
 

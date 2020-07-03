@@ -1,26 +1,23 @@
-<h2>Our expertise are ...</h2>
+<section class="features">
+<div class="row">
+    <h2>Let us be a part of your beautiful journey</h2>
+</div>
 
-<div class="horizontal">
-    <div *ngFor="let skill of skills">
-        <div class="vertical">
-            <a [title]="skill.name + '.details'" [routerLink]="['/home',skill.name]">
+<div class="row">
+<div *ngFor="let skill of skills; trackBy: trackBySkillId">
+<div class="col span-1-of-4 feature-box" [ngStyle]="{ 'opacity' : highlight(skill.name) }">
+    
                 <h3>
                     {{skill.name}}
                 </h3>
-            </a>
-            <app-discount-label [skill]="skill">
-            </app-discount-label>
-
-        </div>
+                <p>
+                    {{skill.description}}
+                </p>
+                <a [routerLink]="['/gallery']">View Gallery</a>
     </div>
 </div>
-
-<div>
-    <a class="link-gallery" title="View Gallery" [routerLink]="['/gallery']"> 
-        View Gallery
-    </a>
 </div>
-
+</section>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

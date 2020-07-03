@@ -5,3 +5,128 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */
+
+.header {
+    /* background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(../../assets/images/alasdair-elmes-ULHxWq8reao-unsplash.jpg); */
+    /* background-image: linear-gradient(rgba(255, 255, 255), rgb(255, 255, 255)), url(../../assets/images/maternity1.jpg);  */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: background-image 2s;
+    /* transition: all .2s ease;
+    -webkit-animation: fade 5s infinite;
+    -moz-animation: fade 5s infinite;
+    -o-animation: fade 5s infinite; 
+    animation: fade 5s infinite; */
+    z-index: -1;
+}
+
+@-o-keyframes fade {
+    0% {
+        
+        opacity: 0;
+      }
+      50% {
+        
+        opacity: 1;
+      }
+      100% {
+        
+        opacity: 0;
+      }
+  }
+  @keyframes fade {
+    0% {
+      
+      opacity: 0;
+    }
+    50% {
+      
+      opacity: 1;
+    }
+    100% {
+      
+      opacity: 0;
+    }
+  }
+
+@-moz-keyframes fade {
+    0% {
+        
+        opacity: 0;
+      }
+      50% {
+        
+        opacity: 1;
+      }
+      100% {
+        
+        opacity: 0;
+      }
+  }
+
+@-webkit-keyframes fade {
+    0% {
+        
+        opacity: 0;
+      }
+      50% {
+        
+        opacity: 1;
+      }
+      100% {
+        
+        opacity: 0;
+      }
+  }
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 180%;
+    display: inline-block;
+    width: 40%;
+    padding-top: 60px;
+    -webkit-text-decoration-color: transparent; 
+    text-decoration-color: transparent;
+    letter-spacing: 1px;
+    font-family: 'MuseoModerno', cursive;
+}
+
+
+.story-teller-title {
+    text-decoration: underline;
+    -webkit-text-decoration-color: transparent; 
+    text-decoration-color: transparent;
+    color: #fff; 
+    font-size: 60px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 175px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+.story-teller-title:after {
+    display: block;
+    height: 4px;
+    background-color: rgb(235, 3, 100);
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.story-teller-title:before {
+    display: block;
+    height: 4px;
+    background-color: rgb(235, 3, 100);
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+

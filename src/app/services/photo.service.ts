@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { photos } from '../photos';
+import { photos } from '../constants/photos';
+import { Photo } from '../interfaces/photos';
 
 @Injectable({
     providedIn : 'root'
 })
 
 export class PhotoService  {
-    photos;
+    photos: Photo[];
 
     constructor(){
         this.photos = photos;

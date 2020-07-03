@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import { skills } from '../skills';
+import { skills } from '../constants/skills';
 import { QuoteService } from '../services/quotes.service'
 
 @Component({

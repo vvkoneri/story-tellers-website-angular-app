@@ -12,5 +12,5 @@
     </app-event-book>
   </div>
 
-  <h5 *ngIf="quotePrice"> Best price : {{ quotePrice }} Rs </h5>
+  <h5 *ngIf="quotePrice"> Best price : {{ quotePrice | currency: 'INR' }}  </h5>
 </div>

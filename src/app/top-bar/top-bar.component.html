@@ -1,5 +1,12 @@
 <a [routerLink]="['/home']">
-  <h1>{{title}}</h1>
+  <div class="header" [ngStyle]="{ 'backgroundImage' : getBackGroundImage() }" >
+    <div class="row">
+      <h2 class="logo">Story Tellers</h2>
+    </div>
+    <div class="row">
+        <h1 class="story-teller-title">Celebrating Life!</h1>
+    </div>
+  </div>
 </a>
 
 <!-- 

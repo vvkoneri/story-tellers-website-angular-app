@@ -1,6 +1,21 @@
-<h3>Our Gallery...</h3>
-<div *ngFor="let photo of photos" class="vertical">
-    <div class="image-column">
-      <img [src]="photo.photoLink" style="width:100%">
-    </div>
+<section class="gallery">
+<div class="row">
+    <h2>a picture can speak a thousand words and countless emotions</h2>
 </div>
+
+<div class="row">
+<div *ngFor="let photo of photos" class="vertical" >
+    <div *ngFor="let pl of photo.photoLink" class="vertical">
+        <div class="col span-1-of-4">
+            <meta [content]="photo.meta" />
+            <figure>
+                <img class="image-column" [src]="pl.link">
+            </figure>
+        </div>
+</div>
+</div>
+</div>
+
+<a [routerLink]="['/home']">Go Back</a>
+
+</section>

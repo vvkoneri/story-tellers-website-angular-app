@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { quotes } from '../quotes'
+import { quotes } from '../constants/quotes'
+import { Quote } from '../interfaces/quotes';
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class QuoteService {
-    quotes;
+    quotes: Quote[];
     constructor(){
         this.quotes = quotes
     }

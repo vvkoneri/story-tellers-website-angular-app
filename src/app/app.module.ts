@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -12,13 +14,17 @@ import { PhotoWorkComponent } from './photo-work/photo-work.component';
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
 import { BookingFormComponent } from './photo-event-booking/photo-event-booking-form.component'
 
+import { SearchQueryContentDirective } from './directives/search-query-content.directive';
+
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
+    CommonModule,
     RouterModule.forRoot([
       { path: 'home', component: PhotoSkillsComponent },
-      { path: 'home/:category', component: PhotoWorkComponent},
       { path: 'gallery', component: PhotoGalleryComponent }
     ])
   ],
@@ -30,7 +36,8 @@ import { BookingFormComponent } from './photo-event-booking/photo-event-booking-
     PhotoEventBooking,
     PhotoWorkComponent,
     PhotoGalleryComponent,
-    BookingFormComponent
+    BookingFormComponent,
+    SearchQueryContentDirective
   ],
   bootstrap: [ AppComponent ]
 })

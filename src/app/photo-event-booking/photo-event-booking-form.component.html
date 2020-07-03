@@ -1,9 +1,9 @@
-<form [formGroup]="bookingForm" (ngSubmit)="onSubmit(bookingForm.value)" class="event-form">
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit(bookingForm.value)" class="">
     <div>
         <label for="name">
           Name
         </label>
-        <input id="name" type="text" formControlName="Name">
+        <input id="name" type="text" formControlName="Name" ngModel required>
       </div>
     
       <div>
@@ -26,7 +26,7 @@
         <label for="contact">
           Contact Number
         </label>
-        <input id="contact" type="text" formControlName="Contact Number">
+        <input id="contact" type="text" formControlName="Contact Number" required>
       </div>
 
       <div>
@@ -36,5 +36,5 @@
         <input id="type" type="text" formControlName="Event Type">
       </div>
     
-    <button class="button" type="submit">Book</button>
+    <button [disabled]="bookingForm.form.invalid" class="button" type="submit">Book</button>
 </form>
